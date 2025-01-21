@@ -1,0 +1,22 @@
+# By Yule
+# 模块配置
+
+# 开机后的等待时间，单位秒
+sleep_after_start='60'
+
+# 每次刷新的间隔，单位秒
+sleep_after_refresh='5'
+
+# 日志大小限制，单位KB
+log_file_long='1024'
+
+# 白名单文件列表
+# 列表里的文件不会被移动（在copy模式下会被复制），使用"|"分隔
+WhiteList='白名单测试.txt|白名单测试2.txt'
+
+# move 模式时，是否保留源目录中的目录结构 (true/false)
+# 白名单文件所在目录结构无论如何都不会被删除
+keep_sdir_structure='true'
+
+# 当终目录不存在时是否自动创建 (true/false)
+make_dir_if_tdir_none='false'
