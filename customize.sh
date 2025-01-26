@@ -30,6 +30,7 @@ case "$key_click" in
         mkdir -p /sdcard/测试目录/测试源目录B
         mkdir -p /sdcard/测试目录/测试终目录A
         mkdir -p /sdcard/测试目录/测试终目录B
+        mkdir -p "$MODPATH/config/OPDIR/confs"
         echo 'U0RJUj0iL3NkY2FyZC/mtYvor5Xnm67lvZUv5rWL6K+V5rqQ55uu5b2VQSIKVERJUj0iL3NkY2FyZC/mtYvor5Xnm67lvZUv5rWL6K+V57uI55uu5b2VQSIKTU9ERT0ibW92ZSIK' | base64 -d > "$MODPATH/config/OPDIR/confs/1"
         echo -n 'U0RJUj0iL3NkY2FyZC/mtYvor5Xnm67lvZUv5rWL6K+V5rqQ55uu5b2VQiIKVERJUj0iL3NkY2FyZC/mtYvor5Xnm67lvZUv5rWL6K+V57uI55uu5b2VQiIKTU9ERT0ibW92ZSIK' | base64 -d > "$MODPATH/config/OPDIR/confs/2"
         echo "- ✅ 已为您创建测试体验项目"
@@ -41,4 +42,3 @@ esac
 echo "- ✅ 安装完成，请重启生效"
 echo "- 配置本模块: /data/adb/module/FileHelper/config/"
 echo "- 请先阅读:   /data/adb/module/FileHelper/README.md"
-echo "- 捐赠版获取: 微信 YuleFree-inv"

@@ -187,6 +187,7 @@ file_operation() {
         # mount --bind 操作
         LOGRCD "INFO" "$now_pro" "开始挂载绑定目录：源目录 = $SDIR，目标目录 = $TDIR"
         if [ ! -f "$MODDIR/yule/mount/$now_pro" ]; then
+            mkdir -p "$MODDIR/yule/mount"
             touch "$MODDIR/yule/mount/$now_pro"
             mount --bind "$SDIR" "$TDIR"
             LOGRCD "INFO" "$now_pro" "挂载成功: $SDIR 到 $TDIR"
@@ -240,7 +241,10 @@ operation() {
 }
 
 sleep $sleep_after_start
-notice "yule" "文件重定向 - 启动成功" "模块已成功启动，感谢您的使用。捐赠版可自定义或删除该通知、获取更多功能以及更快更新。捐赠请联系微信：YuleFree-inv"
+notice "yule" "文件重定向 - 启动成功" "模块已成功启动，感谢您的使用。"
+mkdir -p $COUNTER
+mkdir -p $VARES
+mkdir -p $MODDIR/yule/logarchive
 
 while true; do
     while [ -f $MODDIR/STOP ]; do
